@@ -1,0 +1,104 @@
+\hypertarget{math__opts_8h}{\section{lib/math\-\_\-opts.h File Reference}
+\label{math__opts_8h}\index{lib/math\-\_\-opts.\-h@{lib/math\-\_\-opts.\-h}}
+}
+
+
+Header containing number generators.  
+
+
+{\ttfamily \#include $<$gmp.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}blumblumshub.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bit\-\_\-opts.\-h\char`\"{}}\\*
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{math__opts_8h_acc166508d5cfbf4100f8622ce97f4985}{\#define {\bfseries B\-I\-N\-A\-R\-Y}~2}\label{math__opts_8h_acc166508d5cfbf4100f8622ce97f4985}
+
+\item 
+\hypertarget{math__opts_8h_a7c2d2b121faf048e9623df797612378c}{\#define {\bfseries D\-E\-C\-I\-M\-A\-L}~10}\label{math__opts_8h_a7c2d2b121faf048e9623df797612378c}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+mpz\-\_\-t $\ast$ \hyperlink{math__opts_8h_a2b9057ee110364faf1041f4e5daf02f6}{create\-\_\-random\-\_\-prime\-\_\-gmp\-\_\-number\-\_\-with\-\_\-bbs} (int bit\-\_\-length)
+\begin{DoxyCompactList}\small\item\em Generates random prime numbers with bbs algorithm. \end{DoxyCompactList}\item 
+void \hyperlink{math__opts_8h_a1f7d560d0d3949473fe9705097c21be8}{take\-\_\-mod\-\_\-of\-\_\-exp\-\_\-number2} (mpz\-\_\-t f, mpz\-\_\-t base, mpz\-\_\-t power, mpz\-\_\-t mod)
+\begin{DoxyCompactList}\small\item\em Does exponentiation for the encryption process to the very large numbers. \end{DoxyCompactList}\item 
+void \hyperlink{math__opts_8h_a6ab45a7bffeb82642fd68aebcf66aef8}{generate\-\_\-gmp\-\_\-rand\-\_\-num} (mpz\-\_\-t rop, mpz\-\_\-t mod, unsigned long int seed)
+\begin{DoxyCompactList}\small\item\em Generates a random number with G\-M\-P Library functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header containing number generators. The header file contains the random number generator and primerizing functions. The random numbers generators work with blum blum shub and G\-M\-P library functions. 
+
+\subsection{Function Documentation}
+\hypertarget{math__opts_8h_a2b9057ee110364faf1041f4e5daf02f6}{\index{math\-\_\-opts.\-h@{math\-\_\-opts.\-h}!create\-\_\-random\-\_\-prime\-\_\-gmp\-\_\-number\-\_\-with\-\_\-bbs@{create\-\_\-random\-\_\-prime\-\_\-gmp\-\_\-number\-\_\-with\-\_\-bbs}}
+\index{create\-\_\-random\-\_\-prime\-\_\-gmp\-\_\-number\-\_\-with\-\_\-bbs@{create\-\_\-random\-\_\-prime\-\_\-gmp\-\_\-number\-\_\-with\-\_\-bbs}!math_opts.h@{math\-\_\-opts.\-h}}
+\subsubsection[{create\-\_\-random\-\_\-prime\-\_\-gmp\-\_\-number\-\_\-with\-\_\-bbs}]{\setlength{\rightskip}{0pt plus 5cm}mpz\-\_\-t$\ast$ {\bf create\-\_\-random\-\_\-prime\-\_\-gmp\-\_\-number\-\_\-with\-\_\-bbs} (
+\begin{DoxyParamCaption}
+\item[{int}]{bit\-\_\-length}
+\end{DoxyParamCaption}
+)}}\label{math__opts_8h_a2b9057ee110364faf1041f4e5daf02f6}
+
+
+Generates random prime numbers with bbs algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\-\_\-length} & Bit length for the random number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Prime random number with desired bit length.
+\end{DoxyReturn}
+The function computes a random number with blum blum shub with desired bit length and primerize the number. The return value is a G\-M\-P number. \hypertarget{math__opts_8h_a6ab45a7bffeb82642fd68aebcf66aef8}{\index{math\-\_\-opts.\-h@{math\-\_\-opts.\-h}!generate\-\_\-gmp\-\_\-rand\-\_\-num@{generate\-\_\-gmp\-\_\-rand\-\_\-num}}
+\index{generate\-\_\-gmp\-\_\-rand\-\_\-num@{generate\-\_\-gmp\-\_\-rand\-\_\-num}!math_opts.h@{math\-\_\-opts.\-h}}
+\subsubsection[{generate\-\_\-gmp\-\_\-rand\-\_\-num}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf generate\-\_\-gmp\-\_\-rand\-\_\-num} (
+\begin{DoxyParamCaption}
+\item[{mpz\-\_\-t}]{rop, }
+\item[{mpz\-\_\-t}]{mod, }
+\item[{unsigned long int}]{seed}
+\end{DoxyParamCaption}
+)}}\label{math__opts_8h_a6ab45a7bffeb82642fd68aebcf66aef8}
+
+
+Generates a random number with G\-M\-P Library functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rop} & Generated random number \\
+\hline
+{\em mod} & Defines the max value for the random number \\
+\hline
+{\em seed} & Seed for the random number\\
+\hline
+\end{DoxyParams}
+The function generates a random number by using G\-M\-P random number functions. \hypertarget{math__opts_8h_a1f7d560d0d3949473fe9705097c21be8}{\index{math\-\_\-opts.\-h@{math\-\_\-opts.\-h}!take\-\_\-mod\-\_\-of\-\_\-exp\-\_\-number2@{take\-\_\-mod\-\_\-of\-\_\-exp\-\_\-number2}}
+\index{take\-\_\-mod\-\_\-of\-\_\-exp\-\_\-number2@{take\-\_\-mod\-\_\-of\-\_\-exp\-\_\-number2}!math_opts.h@{math\-\_\-opts.\-h}}
+\subsubsection[{take\-\_\-mod\-\_\-of\-\_\-exp\-\_\-number2}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf take\-\_\-mod\-\_\-of\-\_\-exp\-\_\-number2} (
+\begin{DoxyParamCaption}
+\item[{mpz\-\_\-t}]{f, }
+\item[{mpz\-\_\-t}]{base, }
+\item[{mpz\-\_\-t}]{power, }
+\item[{mpz\-\_\-t}]{mod}
+\end{DoxyParamCaption}
+)}}\label{math__opts_8h_a1f7d560d0d3949473fe9705097c21be8}
+
+
+Does exponentiation for the encryption process to the very large numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The remaining. \\
+\hline
+{\em base} & Base number \\
+\hline
+{\em power} & Power of the number \\
+\hline
+{\em mod} & Modulo number\\
+\hline
+\end{DoxyParams}
+The function implemented with G\-M\-P functions for working easily with big numbers. It does modulo operation to exponential functions quickly. Since the for loop inside the function loops for the bit length of the exponential number, the function runs very fast. For example if we have 1024 bit key and we are doing the encryption, the loop only loops for 1024 times. It turns out O(n) is the run time for the whole encryption. 

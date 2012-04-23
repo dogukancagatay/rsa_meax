@@ -1,0 +1,97 @@
+\hypertarget{rsa__opts_8h}{\section{lib/rsa\-\_\-opts.h File Reference}
+\label{rsa__opts_8h}\index{lib/rsa\-\_\-opts.\-h@{lib/rsa\-\_\-opts.\-h}}
+}
+
+
+The header containing the R\-S\-A key generators.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$gmp.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}math\-\_\-opts.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_r_s_a___k_e_y___b_a_s_e}{R\-S\-A\-\_\-\-K\-E\-Y\-\_\-\-B\-A\-S\-E}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_r_s_a___k_e_y___b_a_s_e}{R\-S\-A\-\_\-\-K\-E\-Y\-\_\-\-B\-A\-S\-E} holds the numbers necessary for the creation of public and private keys. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_r_s_a___k_e_y_s}{R\-S\-A\-\_\-\-K\-E\-Y\-S}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_r_s_a___k_e_y_s}{R\-S\-A\-\_\-\-K\-E\-Y\-S} used to hold public and private key together. It is needed because in the creation process the 2 keys are created sequentially so we needed this structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_r_s_a___k_e_y}{R\-S\-A\-\_\-\-K\-E\-Y}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_r_s_a___k_e_y}{R\-S\-A\-\_\-\-K\-E\-Y} is general key holder for public or private key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{rsa__opts_8h_a51f464c74708cf861618a982c8c681cb}{P\-Q\-B\-I\-T\-L\-E\-N\-G\-T\-H}~512
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{rsa__opts_8h_ae0ac79dd15f7a0b1df13666cad1a04d0}{typedef struct \hyperlink{struct_r_s_a___k_e_y___b_a_s_e}{R\-S\-A\-\_\-\-K\-E\-Y\-\_\-\-B\-A\-S\-E} {\bfseries rsa\-\_\-key\-\_\-base}}\label{rsa__opts_8h_ae0ac79dd15f7a0b1df13666cad1a04d0}
+
+\item 
+\hypertarget{rsa__opts_8h_a074d3f146adb06eefb6b688736f892d0}{typedef struct \hyperlink{struct_r_s_a___k_e_y_s}{R\-S\-A\-\_\-\-K\-E\-Y\-S} {\bfseries rsa\-\_\-keys}}\label{rsa__opts_8h_a074d3f146adb06eefb6b688736f892d0}
+
+\item 
+\hypertarget{rsa__opts_8h_aedb671a6595cb0500fd72364ef5c5278}{typedef struct \hyperlink{struct_r_s_a___k_e_y}{R\-S\-A\-\_\-\-K\-E\-Y} {\bfseries rsa\-\_\-key}}\label{rsa__opts_8h_aedb671a6595cb0500fd72364ef5c5278}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_r_s_a___k_e_y___b_a_s_e}{rsa\-\_\-key\-\_\-base} $\ast$ \hyperlink{rsa__opts_8h_a53731b881c911b0379070d093987cba3}{generate\-\_\-rsa\-\_\-key\-\_\-base} (int key\-\_\-length)
+\begin{DoxyCompactList}\small\item\em Generates key base(p and q), for generation of public and private keys. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_s_a___k_e_y_s}{rsa\-\_\-keys} $\ast$ \hyperlink{rsa__opts_8h_a52875da79fc45866be3b45cd874f0c4d}{create\-\_\-pub\-\_\-key} (\hyperlink{struct_r_s_a___k_e_y___b_a_s_e}{rsa\-\_\-key\-\_\-base} $\ast$key\-\_\-base)
+\begin{DoxyCompactList}\small\item\em Computes public and private keys according to the given rsa\-\_\-key\-\_\-base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The header containing the R\-S\-A key generators. Header file contains the functions and structures needed for generating public and private R\-S\-A keys. 
+
+\subsection{Define Documentation}
+\hypertarget{rsa__opts_8h_a51f464c74708cf861618a982c8c681cb}{\index{rsa\-\_\-opts.\-h@{rsa\-\_\-opts.\-h}!P\-Q\-B\-I\-T\-L\-E\-N\-G\-T\-H@{P\-Q\-B\-I\-T\-L\-E\-N\-G\-T\-H}}
+\index{P\-Q\-B\-I\-T\-L\-E\-N\-G\-T\-H@{P\-Q\-B\-I\-T\-L\-E\-N\-G\-T\-H}!rsa_opts.h@{rsa\-\_\-opts.\-h}}
+\subsubsection[{P\-Q\-B\-I\-T\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf P\-Q\-B\-I\-T\-L\-E\-N\-G\-T\-H}~512}}\label{rsa__opts_8h_a51f464c74708cf861618a982c8c681cb}
+Default bit length for p and q. 
+
+\subsection{Function Documentation}
+\hypertarget{rsa__opts_8h_a52875da79fc45866be3b45cd874f0c4d}{\index{rsa\-\_\-opts.\-h@{rsa\-\_\-opts.\-h}!create\-\_\-pub\-\_\-key@{create\-\_\-pub\-\_\-key}}
+\index{create\-\_\-pub\-\_\-key@{create\-\_\-pub\-\_\-key}!rsa_opts.h@{rsa\-\_\-opts.\-h}}
+\subsubsection[{create\-\_\-pub\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rsa\-\_\-keys}$\ast$ {\bf create\-\_\-pub\-\_\-key} (
+\begin{DoxyParamCaption}
+\item[{{\bf rsa\-\_\-key\-\_\-base} $\ast$}]{key\-\_\-base}
+\end{DoxyParamCaption}
+)}}\label{rsa__opts_8h_a52875da79fc45866be3b45cd874f0c4d}
+
+
+Computes public and private keys according to the given rsa\-\_\-key\-\_\-base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\-\_\-base} & The calculated p and q values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Public and Private keys.
+\end{DoxyReturn}
+Although its name is create\-\_\-pub\-\_\-key the function generate both public and private keys. The public and private keys are computed via G\-M\-P Library functions since we are dealing with big numbers. The e is the public key's part and generated randomly. And d is generated according to e by inverse modular operation. \hypertarget{rsa__opts_8h_a53731b881c911b0379070d093987cba3}{\index{rsa\-\_\-opts.\-h@{rsa\-\_\-opts.\-h}!generate\-\_\-rsa\-\_\-key\-\_\-base@{generate\-\_\-rsa\-\_\-key\-\_\-base}}
+\index{generate\-\_\-rsa\-\_\-key\-\_\-base@{generate\-\_\-rsa\-\_\-key\-\_\-base}!rsa_opts.h@{rsa\-\_\-opts.\-h}}
+\subsubsection[{generate\-\_\-rsa\-\_\-key\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rsa\-\_\-key\-\_\-base}$\ast$ {\bf generate\-\_\-rsa\-\_\-key\-\_\-base} (
+\begin{DoxyParamCaption}
+\item[{int}]{key\-\_\-length}
+\end{DoxyParamCaption}
+)}}\label{rsa__opts_8h_a53731b881c911b0379070d093987cba3}
+
+
+Generates key base(p and q), for generation of public and private keys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\-\_\-length} & Indicates the key length for p and q \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The base for the public and private keys.
+\end{DoxyReturn}
+The function generates big prime numbers p and q with the help of blum blum shub R\-N\-G with the desired bit length. Then calculates n and phi according to formulas and packs all calculated values in a rsa\-\_\-key\-\_\-base structure. n = p x q
+
+phi = (p-\/1) x (q-\/1) = p x q -\/ p -\/ q + 1 

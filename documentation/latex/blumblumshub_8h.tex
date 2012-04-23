@@ -1,0 +1,74 @@
+\hypertarget{blumblumshub_8h}{\section{lib/blumblumshub.h File Reference}
+\label{blumblumshub_8h}\index{lib/blumblumshub.\-h@{lib/blumblumshub.\-h}}
+}
+
+
+Blum blum shub Pseudo R\-N\-G.  
+
+
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{blumblumshub_8h_aae0603a29adf1e380abcc5d27ca118c6}{\#define {\bfseries R\-A\-N\-D\-\_\-\-M\-O\-D\-\_\-1}~300}\label{blumblumshub_8h_aae0603a29adf1e380abcc5d27ca118c6}
+
+\item 
+\hypertarget{blumblumshub_8h_a85d0dc0ee8de0ad5e1baef4cdf459d33}{\#define {\bfseries R\-A\-N\-D\-\_\-\-M\-O\-D\-\_\-2}~600}\label{blumblumshub_8h_a85d0dc0ee8de0ad5e1baef4cdf459d33}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{blumblumshub_8h_ab2d3d778f05558565cc6caba2e171eec}{is\-\_\-prime} (int x)
+\begin{DoxyCompactList}\small\item\em Determines if the number is prime or not. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{blumblumshub_8h_aefb20e52d3e8bc0bdb30cb8992c099e4}{bbs\-\_\-bit\-\_\-string} (int bit\-\_\-number, int mod)
+\begin{DoxyCompactList}\small\item\em Blum Blum Shub Random Number Generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Blum blum shub Pseudo R\-N\-G. Blum Blum Shub Pseudo Random Number Generator implementation is in this header file. It is used to create random numbers in the creation of R\-S\-A key pairs. 
+
+\subsection{Function Documentation}
+\hypertarget{blumblumshub_8h_aefb20e52d3e8bc0bdb30cb8992c099e4}{\index{blumblumshub.\-h@{blumblumshub.\-h}!bbs\-\_\-bit\-\_\-string@{bbs\-\_\-bit\-\_\-string}}
+\index{bbs\-\_\-bit\-\_\-string@{bbs\-\_\-bit\-\_\-string}!blumblumshub.h@{blumblumshub.\-h}}
+\subsubsection[{bbs\-\_\-bit\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf bbs\-\_\-bit\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{int}]{bit\-\_\-number, }
+\item[{int}]{mod}
+\end{DoxyParamCaption}
+)}}\label{blumblumshub_8h_aefb20e52d3e8bc0bdb30cb8992c099e4}
+
+
+Blum Blum Shub Random Number Generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\-\_\-number} & How many bits will be generated. \\
+\hline
+{\em mod} & Mod of bits.(generally 2 for creation of a bit) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Generated bit string.
+\end{DoxyReturn}
+This version of Blum blum shub generates given number of bits and puts them into a bit string. \hypertarget{blumblumshub_8h_ab2d3d778f05558565cc6caba2e171eec}{\index{blumblumshub.\-h@{blumblumshub.\-h}!is\-\_\-prime@{is\-\_\-prime}}
+\index{is\-\_\-prime@{is\-\_\-prime}!blumblumshub.h@{blumblumshub.\-h}}
+\subsubsection[{is\-\_\-prime}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf is\-\_\-prime} (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{blumblumshub_8h_ab2d3d778f05558565cc6caba2e171eec}
+
+
+Determines if the number is prime or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True(1)\-: Prime or False(0)\-: Not Prime
+\end{DoxyReturn}
+This function uses the deterministic primality function of Euler. 

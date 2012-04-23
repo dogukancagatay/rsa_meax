@@ -1,0 +1,304 @@
+\hypertarget{bit__opts_8h}{\section{lib/bit\-\_\-opts.h File Reference}
+\label{bit__opts_8h}\index{lib/bit\-\_\-opts.\-h@{lib/bit\-\_\-opts.\-h}}
+}
+
+
+Bit operations on C integers and characters.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} is used to represent and manipulate the bits of an integer number. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T} is used to represent and manipulate the bits of an character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{bit__opts_8h_a59888c38e93dc3f7340b9b8f494d4f0a}{\#define {\bfseries I\-N\-T\-B\-I\-T\-L\-E\-N\-G\-T\-H}~32}\label{bit__opts_8h_a59888c38e93dc3f7340b9b8f494d4f0a}
+
+\item 
+\hypertarget{bit__opts_8h_a8aa64f0049a6b50de232824b587b335c}{\#define {\bfseries C\-H\-A\-R\-B\-I\-T\-L\-E\-N\-G\-T\-H}~8}\label{bit__opts_8h_a8aa64f0049a6b50de232824b587b335c}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{bit__opts_8h_a6f35b797b0a94c448d8f6bcbda4ed7d6}{typedef struct \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} {\bfseries intbit}}\label{bit__opts_8h_a6f35b797b0a94c448d8f6bcbda4ed7d6}
+
+\item 
+\hypertarget{bit__opts_8h_a27abcf7f1bc20ec1a32aac18d409684b}{typedef struct \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T} {\bfseries charbit}}\label{bit__opts_8h_a27abcf7f1bc20ec1a32aac18d409684b}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_c_h_a_r_b_i_t}{charbit} $\ast$ \hyperlink{bit__opts_8h_a537863d0e96dc68b806868ee20ed3e63}{char\-\_\-to\-\_\-bits} (unsigned char c)
+\begin{DoxyCompactList}\small\item\em The function reveals the bits of the input character. \end{DoxyCompactList}\item 
+char \hyperlink{bit__opts_8h_a5fcba2a461f381f2ee065850170160d9}{bits\-\_\-to\-\_\-char} (\hyperlink{struct_c_h_a_r_b_i_t}{charbit} $\ast$cb)
+\begin{DoxyCompactList}\small\item\em This function converts bit to character. \end{DoxyCompactList}\item 
+int \hyperlink{bit__opts_8h_a13f6ce48579194af88aff863b601ddc5}{getbit\-\_\-of\-\_\-charbit} (\hyperlink{struct_c_h_a_r_b_i_t}{charbit} $\ast$cb, int i)
+\begin{DoxyCompactList}\small\item\em Reveals the bit value at the given index. \end{DoxyCompactList}\item 
+void \hyperlink{bit__opts_8h_a749280fc501d054c583f136a5b4c1a0f}{setbit\-\_\-of\-\_\-charbit} (\hyperlink{struct_c_h_a_r_b_i_t}{charbit} $\ast$cb, unsigned int i, unsigned int setbit)
+\begin{DoxyCompactList}\small\item\em The function does the manipulation at the given index of the character. \end{DoxyCompactList}\item 
+void \hyperlink{bit__opts_8h_a457a01f918fdcf110dfb9e4b71160ad2}{setbit\-\_\-of\-\_\-intbit} (\hyperlink{struct_i_n_t_b_i_t}{intbit} $\ast$bin\-\_\-num, unsigned int i, unsigned int setbit)
+\begin{DoxyCompactList}\small\item\em The function does the manipulation at the given index of the integer. \end{DoxyCompactList}\item 
+int \hyperlink{bit__opts_8h_a3fa4b3cbd2ecda660d496a6b3484092a}{getbit\-\_\-of\-\_\-intbit} (\hyperlink{struct_i_n_t_b_i_t}{intbit} $\ast$bin\-\_\-num, int i)
+\begin{DoxyCompactList}\small\item\em Reveals the bit value at the given index. \end{DoxyCompactList}\item 
+void \hyperlink{bit__opts_8h_a44b64bca7a21123d6b950aa6aea31d88}{print\-\_\-bits\-\_\-of\-\_\-intbits} (\hyperlink{struct_i_n_t_b_i_t}{intbit} $\ast$bin\-\_\-num)
+\begin{DoxyCompactList}\small\item\em Prints the bits of \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure on the screen. \end{DoxyCompactList}\item 
+\hyperlink{struct_i_n_t_b_i_t}{intbit} $\ast$ \hyperlink{bit__opts_8h_a45bf9ee718297e5da437b214d1c38209}{int\-\_\-to\-\_\-bits} (unsigned int x)
+\begin{DoxyCompactList}\small\item\em The function reveals the bits of the input integer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{bit__opts_8h_a249deb141eda0ae75dd7c0dfe0e287bc}{bits\-\_\-to\-\_\-int} (\hyperlink{struct_i_n_t_b_i_t}{intbit} $\ast$bin\-\_\-num)
+\begin{DoxyCompactList}\small\item\em This function converts bit to integer. \end{DoxyCompactList}\item 
+int \hyperlink{bit__opts_8h_a1dabcd6043008772fbda1f1e62c7ccd6}{find\-\_\-right\-\_\-most\-\_\-char} (char $\ast$str, int size)
+\item 
+int \hyperlink{bit__opts_8h_af6aee640e2b3a7284c0676380f2b2b5b}{compress\-\_\-chars\-\_\-to\-\_\-int} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em The function does the compression on the given 4 characters. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{bit__opts_8h_a99d267b836f13b19679203f2a2c14338}{decompress\-\_\-int\-\_\-to\-\_\-char} (unsigned int x)
+\begin{DoxyCompactList}\small\item\em Decompresses the integer to its initial character values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bit operations on C integers and characters. This file contains the implementations to bit manipulation functions for int and char types in C. 
+
+\subsection{Function Documentation}
+\hypertarget{bit__opts_8h_a5fcba2a461f381f2ee065850170160d9}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!bits\-\_\-to\-\_\-char@{bits\-\_\-to\-\_\-char}}
+\index{bits\-\_\-to\-\_\-char@{bits\-\_\-to\-\_\-char}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{bits\-\_\-to\-\_\-char}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf bits\-\_\-to\-\_\-char} (
+\begin{DoxyParamCaption}
+\item[{{\bf charbit} $\ast$}]{cb}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a5fcba2a461f381f2ee065850170160d9}
+
+
+This function converts bit to character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & Character represented in bits as \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Character value
+\end{DoxyReturn}
+The function takes the bit representation in \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T} structure and turns them into the corresponding character. \hypertarget{bit__opts_8h_a249deb141eda0ae75dd7c0dfe0e287bc}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!bits\-\_\-to\-\_\-int@{bits\-\_\-to\-\_\-int}}
+\index{bits\-\_\-to\-\_\-int@{bits\-\_\-to\-\_\-int}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{bits\-\_\-to\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf bits\-\_\-to\-\_\-int} (
+\begin{DoxyParamCaption}
+\item[{{\bf intbit} $\ast$}]{bin\-\_\-num}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a249deb141eda0ae75dd7c0dfe0e287bc}
+
+
+This function converts bit to integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin\-\_\-num} & Integer represented in bits as \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value
+\end{DoxyReturn}
+The function takes the bit representation in \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure and turns them into the corresponding integer. \hypertarget{bit__opts_8h_a537863d0e96dc68b806868ee20ed3e63}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!char\-\_\-to\-\_\-bits@{char\-\_\-to\-\_\-bits}}
+\index{char\-\_\-to\-\_\-bits@{char\-\_\-to\-\_\-bits}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{char\-\_\-to\-\_\-bits}]{\setlength{\rightskip}{0pt plus 5cm}{\bf charbit}$\ast$ {\bf char\-\_\-to\-\_\-bits} (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{c}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a537863d0e96dc68b806868ee20ed3e63}
+
+
+The function reveals the bits of the input character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Input character \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The bits of the input character in a \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T} structure.
+\end{DoxyReturn}
+The function extract the bits of the input character and put them into a \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T} structure for easy manipulation. \hypertarget{bit__opts_8h_af6aee640e2b3a7284c0676380f2b2b5b}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!compress\-\_\-chars\-\_\-to\-\_\-int@{compress\-\_\-chars\-\_\-to\-\_\-int}}
+\index{compress\-\_\-chars\-\_\-to\-\_\-int@{compress\-\_\-chars\-\_\-to\-\_\-int}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{compress\-\_\-chars\-\_\-to\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf compress\-\_\-chars\-\_\-to\-\_\-int} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_af6aee640e2b3a7284c0676380f2b2b5b}
+
+
+The function does the compression on the given 4 characters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Input string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Compressed integer value
+\end{DoxyReturn}
+The compression that compresses 4 characters into an integer is done in this function. It reveals the bits of the characters and puts returns them as an integer. \hypertarget{bit__opts_8h_a99d267b836f13b19679203f2a2c14338}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!decompress\-\_\-int\-\_\-to\-\_\-char@{decompress\-\_\-int\-\_\-to\-\_\-char}}
+\index{decompress\-\_\-int\-\_\-to\-\_\-char@{decompress\-\_\-int\-\_\-to\-\_\-char}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{decompress\-\_\-int\-\_\-to\-\_\-char}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf decompress\-\_\-int\-\_\-to\-\_\-char} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a99d267b836f13b19679203f2a2c14338}
+
+
+Decompresses the integer to its initial character values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Compressed integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decompressed characters
+\end{DoxyReturn}
+The decompression is done in this function. The function basically reads the bits of integer and extracts them as 4 characters. \hypertarget{bit__opts_8h_a1dabcd6043008772fbda1f1e62c7ccd6}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!find\-\_\-right\-\_\-most\-\_\-char@{find\-\_\-right\-\_\-most\-\_\-char}}
+\index{find\-\_\-right\-\_\-most\-\_\-char@{find\-\_\-right\-\_\-most\-\_\-char}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{find\-\_\-right\-\_\-most\-\_\-char}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf find\-\_\-right\-\_\-most\-\_\-char} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a1dabcd6043008772fbda1f1e62c7ccd6}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Input string \\
+\hline
+{\em size} & Size of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The last characters index 
+\end{DoxyReturn}
+\hypertarget{bit__opts_8h_a13f6ce48579194af88aff863b601ddc5}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!getbit\-\_\-of\-\_\-charbit@{getbit\-\_\-of\-\_\-charbit}}
+\index{getbit\-\_\-of\-\_\-charbit@{getbit\-\_\-of\-\_\-charbit}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{getbit\-\_\-of\-\_\-charbit}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf getbit\-\_\-of\-\_\-charbit} (
+\begin{DoxyParamCaption}
+\item[{{\bf charbit} $\ast$}]{cb, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a13f6ce48579194af88aff863b601ddc5}
+
+
+Reveals the bit value at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & Character represented in bits as \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T} structure \\
+\hline
+{\em i} & Index of the bit that will be gotten. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bit value of the given bit index.
+\end{DoxyReturn}
+The function reveals the bit value of the given character given as \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T} structure at the given index. \hypertarget{bit__opts_8h_a3fa4b3cbd2ecda660d496a6b3484092a}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!getbit\-\_\-of\-\_\-intbit@{getbit\-\_\-of\-\_\-intbit}}
+\index{getbit\-\_\-of\-\_\-intbit@{getbit\-\_\-of\-\_\-intbit}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{getbit\-\_\-of\-\_\-intbit}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf getbit\-\_\-of\-\_\-intbit} (
+\begin{DoxyParamCaption}
+\item[{{\bf intbit} $\ast$}]{bin\-\_\-num, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a3fa4b3cbd2ecda660d496a6b3484092a}
+
+
+Reveals the bit value at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin\-\_\-num} & Integer represented in bits as \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure \\
+\hline
+{\em i} & Index of the bit that will be gotten \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bit value at the given bit index.
+\end{DoxyReturn}
+The function reveals the bit value of the given integer given as \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure at the given index. \hypertarget{bit__opts_8h_a45bf9ee718297e5da437b214d1c38209}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!int\-\_\-to\-\_\-bits@{int\-\_\-to\-\_\-bits}}
+\index{int\-\_\-to\-\_\-bits@{int\-\_\-to\-\_\-bits}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{int\-\_\-to\-\_\-bits}]{\setlength{\rightskip}{0pt plus 5cm}{\bf intbit}$\ast$ {\bf int\-\_\-to\-\_\-bits} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a45bf9ee718297e5da437b214d1c38209}
+
+
+The function reveals the bits of the input integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The bits of the input integer in a \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure.
+\end{DoxyReturn}
+The function extract the bits of the input integer and put them into a \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure for easy manipulation. \hypertarget{bit__opts_8h_a44b64bca7a21123d6b950aa6aea31d88}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!print\-\_\-bits\-\_\-of\-\_\-intbits@{print\-\_\-bits\-\_\-of\-\_\-intbits}}
+\index{print\-\_\-bits\-\_\-of\-\_\-intbits@{print\-\_\-bits\-\_\-of\-\_\-intbits}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{print\-\_\-bits\-\_\-of\-\_\-intbits}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf print\-\_\-bits\-\_\-of\-\_\-intbits} (
+\begin{DoxyParamCaption}
+\item[{{\bf intbit} $\ast$}]{bin\-\_\-num}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a44b64bca7a21123d6b950aa6aea31d88}
+
+
+Prints the bits of \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin\-\_\-num} & Integer represented in bits as \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure This function is not used in the project. It is put for the debugging purposes. \\
+\hline
+\end{DoxyParams}
+\hypertarget{bit__opts_8h_a749280fc501d054c583f136a5b4c1a0f}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!setbit\-\_\-of\-\_\-charbit@{setbit\-\_\-of\-\_\-charbit}}
+\index{setbit\-\_\-of\-\_\-charbit@{setbit\-\_\-of\-\_\-charbit}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{setbit\-\_\-of\-\_\-charbit}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf setbit\-\_\-of\-\_\-charbit} (
+\begin{DoxyParamCaption}
+\item[{{\bf charbit} $\ast$}]{cb, }
+\item[{unsigned int}]{i, }
+\item[{unsigned int}]{setbit}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a749280fc501d054c583f136a5b4c1a0f}
+
+
+The function does the manipulation at the given index of the character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & Character represented in bits as \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T} structure \\
+\hline
+{\em i} & Index of the bit that will be manipulated \\
+\hline
+{\em setbit} & New bit value.\\
+\hline
+\end{DoxyParams}
+This function enables us to manipulate the bits of the given character as \hyperlink{struct_c_h_a_r_b_i_t}{C\-H\-A\-R\-B\-I\-T}. \hypertarget{bit__opts_8h_a457a01f918fdcf110dfb9e4b71160ad2}{\index{bit\-\_\-opts.\-h@{bit\-\_\-opts.\-h}!setbit\-\_\-of\-\_\-intbit@{setbit\-\_\-of\-\_\-intbit}}
+\index{setbit\-\_\-of\-\_\-intbit@{setbit\-\_\-of\-\_\-intbit}!bit_opts.h@{bit\-\_\-opts.\-h}}
+\subsubsection[{setbit\-\_\-of\-\_\-intbit}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf setbit\-\_\-of\-\_\-intbit} (
+\begin{DoxyParamCaption}
+\item[{{\bf intbit} $\ast$}]{bin\-\_\-num, }
+\item[{unsigned int}]{i, }
+\item[{unsigned int}]{setbit}
+\end{DoxyParamCaption}
+)}}\label{bit__opts_8h_a457a01f918fdcf110dfb9e4b71160ad2}
+
+
+The function does the manipulation at the given index of the integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin\-\_\-num} & Integer represented in bits as \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T} structure \\
+\hline
+{\em i} & Index of the bit that will be manipulated \\
+\hline
+{\em setbit} & New bit value\\
+\hline
+\end{DoxyParams}
+This function enables us to manipulate the bits of the given integer as \hyperlink{struct_i_n_t_b_i_t}{I\-N\-T\-B\-I\-T}. 

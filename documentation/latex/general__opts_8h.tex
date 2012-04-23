@@ -1,0 +1,432 @@
+\hypertarget{general__opts_8h}{\section{lib/general\-\_\-opts.h File Reference}
+\label{general__opts_8h}\index{lib/general\-\_\-opts.\-h@{lib/general\-\_\-opts.\-h}}
+}
+
+
+General operations for the program.  
+
+
+{\ttfamily \#include \char`\"{}sha256.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{general__opts_8h_a250f51f15a488f405157e57769d8ad0e}{create\-\_\-hash\-\_\-of\-\_\-string} (char $\ast$str, int size)
+\begin{DoxyCompactList}\small\item\em Hashes the given string value. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{general__opts_8h_af5291dd029356e9bb2946bd0bfa2d7a8}{create\-\_\-hash\-\_\-of\-\_\-file} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Hashes the given file. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{general__opts_8h_ac2a35e39b455ce1139aa1c8684301da1}{pub\-\_\-enc} (char $\ast$m, \hyperlink{struct_r_s_a___k_e_y}{rsa\-\_\-key} $\ast$key)
+\begin{DoxyCompactList}\small\item\em Encrypts the given plain text with the given public key. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{general__opts_8h_a9203fddda70b31c6da977a33328941d1}{pri\-\_\-dec} (char $\ast$c, \hyperlink{struct_r_s_a___k_e_y}{rsa\-\_\-key} $\ast$key)
+\begin{DoxyCompactList}\small\item\em Decrypts the given ciphered text(encrypted with public encryption) with the given private key. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{general__opts_8h_a5736affaf8dc8bc05558cee3f198f62e}{pub\-\_\-dec} (char $\ast$c, \hyperlink{struct_r_s_a___k_e_y}{rsa\-\_\-key} $\ast$key)
+\begin{DoxyCompactList}\small\item\em Decrypts the given ciphered text(encrypted with private encryption) with the given public key. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{general__opts_8h_a360ad629958e9cc22babf446ed6550f3}{pri\-\_\-enc} (char $\ast$m, \hyperlink{struct_r_s_a___k_e_y}{rsa\-\_\-key} $\ast$key)
+\begin{DoxyCompactList}\small\item\em Encrypts the given plain text with the given private key. \end{DoxyCompactList}\item 
+void \hyperlink{general__opts_8h_a2f2b3dc8a17b5aacaef9690409de89df}{write\-\_\-public\-\_\-key\-\_\-to\-\_\-file} (\hyperlink{struct_r_s_a___k_e_y_s}{rsa\-\_\-keys} $\ast$keys, char $\ast$username)
+\begin{DoxyCompactList}\small\item\em Writes the public key to file with user name. \end{DoxyCompactList}\item 
+void \hyperlink{general__opts_8h_a118bb481605bbf6a2ad228f078369999}{write\-\_\-private\-\_\-key\-\_\-to\-\_\-file} (\hyperlink{struct_r_s_a___k_e_y_s}{rsa\-\_\-keys} $\ast$keys, char $\ast$username)
+\begin{DoxyCompactList}\small\item\em Writes the private key to file with user name. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{general__opts_8h_a438de4315ebdf2f27597aa7950a70184}{concatenate} (char $\ast$s1, char $\ast$s2)
+\item 
+char $\ast$ \hyperlink{general__opts_8h_a20100a033cb2270b7e73bc8411fb5421}{read\-\_\-file\-\_\-to\-\_\-string} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Gets file content. \end{DoxyCompactList}\item 
+void \hyperlink{general__opts_8h_ab2b15940f94a5725da201f7ccfc1f742}{write\-\_\-string\-\_\-to\-\_\-file} (char $\ast$filename, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Writes the string to file. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_s_a___k_e_y}{rsa\-\_\-key} $\ast$ \hyperlink{general__opts_8h_a7b5bcb0d1c99ef714c433413a254617f}{get\-\_\-key\-\_\-from\-\_\-file} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Read the R\-S\-A key from file. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{general__opts_8h_a992f24eeea692289100bb7cb4c005422}{create\-\_\-ds} (char $\ast$id, \hyperlink{struct_r_s_a___k_e_y}{rsa\-\_\-key} $\ast$pr\-\_\-key)
+\begin{DoxyCompactList}\small\item\em Creates the digital signature of the text. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{general__opts_8h_aac69d038742dcc1a00a1311a9421b63d}{extract\-\_\-id} (char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Separates the plain text. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{general__opts_8h_a24adcc1de92743dc8eaeebc54c40b568}{extract\-\_\-ds} (char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Separates the digital signature. \end{DoxyCompactList}\item 
+int \hyperlink{general__opts_8h_a0bea39747d167b3417d6e2b427186284}{authenticate} (char $\ast$hash1, char $\ast$hash2)
+\begin{DoxyCompactList}\small\item\em Authenticates the hash values are the same or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General operations for the program. General operations used throughout the project, are implemented in this file. 
+
+\subsection{Function Documentation}
+\hypertarget{general__opts_8h_a0bea39747d167b3417d6e2b427186284}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{authenticate}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf authenticate} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{hash1, }
+\item[{char $\ast$}]{hash2}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a0bea39747d167b3417d6e2b427186284}
+
+
+Authenticates the hash values are the same or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hash1} & Hash value value \\
+\hline
+{\em hash2} & Other hash value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success or false(0) on failure
+\end{DoxyReturn}
+Compares the hash values and decides if the sent message is not played on its way to the receiver. \hypertarget{general__opts_8h_a438de4315ebdf2f27597aa7950a70184}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!concatenate@{concatenate}}
+\index{concatenate@{concatenate}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{concatenate}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf concatenate} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s1, }
+\item[{char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a438de4315ebdf2f27597aa7950a70184}
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & String 1 \\
+\hline
+{\em s2} & String 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Concatenation of s1 and s2 with separator between.
+\end{DoxyReturn}
+This function concatenates 2 strings with a separator in between. The separator is 7 \# character. The separator is used for the convenience while extracting the parts. \hypertarget{general__opts_8h_a992f24eeea692289100bb7cb4c005422}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!create\-\_\-ds@{create\-\_\-ds}}
+\index{create\-\_\-ds@{create\-\_\-ds}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{create\-\_\-ds}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf create\-\_\-ds} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{id, }
+\item[{{\bf rsa\-\_\-key} $\ast$}]{pr\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a992f24eeea692289100bb7cb4c005422}
+
+
+Creates the digital signature of the text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Plain text \\
+\hline
+{\em pr\-\_\-key} & Private Key used for encryption of hash \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Digital Signature of the given plain text
+\end{DoxyReturn}
+Digital signature is the encrypted hash of a given text via the owners/senders private key because the digital signature is unique value to that text. It enables us to be sure about the sent message is valid. \hypertarget{general__opts_8h_af5291dd029356e9bb2946bd0bfa2d7a8}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!create\-\_\-hash\-\_\-of\-\_\-file@{create\-\_\-hash\-\_\-of\-\_\-file}}
+\index{create\-\_\-hash\-\_\-of\-\_\-file@{create\-\_\-hash\-\_\-of\-\_\-file}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{create\-\_\-hash\-\_\-of\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf create\-\_\-hash\-\_\-of\-\_\-file} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_af5291dd029356e9bb2946bd0bfa2d7a8}
+
+
+Hashes the given file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hashed value.
+\end{DoxyReturn}
+Creates the hash of the given file using S\-H\-A256 (Secure Hash Algorithm 256 Bits) secure hash algorithm. The S\-H\-A256's output is a 256bit hexadecimal number. The source code of the used S\-H\-A256 can be found in \hyperlink{sha256_8h}{sha256.\-h} file. \hypertarget{general__opts_8h_a250f51f15a488f405157e57769d8ad0e}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!create\-\_\-hash\-\_\-of\-\_\-string@{create\-\_\-hash\-\_\-of\-\_\-string}}
+\index{create\-\_\-hash\-\_\-of\-\_\-string@{create\-\_\-hash\-\_\-of\-\_\-string}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{create\-\_\-hash\-\_\-of\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf create\-\_\-hash\-\_\-of\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a250f51f15a488f405157e57769d8ad0e}
+
+
+Hashes the given string value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Input string \\
+\hline
+{\em size} & Size of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hashed value.
+\end{DoxyReturn}
+Creates the hash of the input string using S\-H\-A256 (Secure Hash Algorithm 256 Bits) secure hash algorithm. The S\-H\-A256's output is a 256bit hexadecimal number. The source code of the used S\-H\-A256 can be found in \hyperlink{sha256_8h}{sha256.\-h} file. \hypertarget{general__opts_8h_a24adcc1de92743dc8eaeebc54c40b568}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!extract\-\_\-ds@{extract\-\_\-ds}}
+\index{extract\-\_\-ds@{extract\-\_\-ds}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{extract\-\_\-ds}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf extract\-\_\-ds} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a24adcc1de92743dc8eaeebc54c40b568}
+
+
+Separates the digital signature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Decrypted Message sent to the receiver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The digital signature created by the sender
+\end{DoxyReturn}
+Separates the digital signature from the concatenation of plain text and digital signature. This operation is done after the decryption of the received file. \hypertarget{general__opts_8h_aac69d038742dcc1a00a1311a9421b63d}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!extract\-\_\-id@{extract\-\_\-id}}
+\index{extract\-\_\-id@{extract\-\_\-id}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{extract\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf extract\-\_\-id} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_aac69d038742dcc1a00a1311a9421b63d}
+
+
+Separates the plain text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Decrypted message sent to the receiver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The plain text.
+\end{DoxyReturn}
+Separates the plain text from the concatenation of plain text and digital signature. This operation is done after the decryption of the received file. \hypertarget{general__opts_8h_a7b5bcb0d1c99ef714c433413a254617f}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!get\-\_\-key\-\_\-from\-\_\-file@{get\-\_\-key\-\_\-from\-\_\-file}}
+\index{get\-\_\-key\-\_\-from\-\_\-file@{get\-\_\-key\-\_\-from\-\_\-file}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{get\-\_\-key\-\_\-from\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rsa\-\_\-key}$\ast$ {\bf get\-\_\-key\-\_\-from\-\_\-file} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a7b5bcb0d1c99ef714c433413a254617f}
+
+
+Read the R\-S\-A key from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Key file's name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\-S\-A Key
+\end{DoxyReturn}
+G\-M\-P (G\-N\-U Mathematical Precision Library) is used in this project to be able to work with very long integers. Mostly the long integers were the keys and encrypted texts. Since we do our exponentiation with G\-M\-P numbers, the key file is read with G\-M\-P Library functions for easy manipulation on the number. A key file has 2 components separated via new line. first part is the e or d and the second part is n. Our rsa\-\_\-key structure has k and n elements to hold these values. \hypertarget{general__opts_8h_a9203fddda70b31c6da977a33328941d1}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!pri\-\_\-dec@{pri\-\_\-dec}}
+\index{pri\-\_\-dec@{pri\-\_\-dec}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{pri\-\_\-dec}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf pri\-\_\-dec} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{c, }
+\item[{{\bf rsa\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a9203fddda70b31c6da977a33328941d1}
+
+
+Decrypts the given ciphered text(encrypted with public encryption) with the given private key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Ciphered Text \\
+\hline
+{\em key} & Private Key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decrypted text
+\end{DoxyReturn}
+This function basically does the R\-S\-A decryption. Decompression is done to reveal the 4 characters we compressed after decryption.
+
+M = C$^\wedge$d mod n will count the total number of decrypted texts
+
+initialized to 0 because first substring of c will start from the
+
+if ciphered text is empty exit
+
+each block contains 4 characters that is compressed into an integer
+
+initialize the gmp numbers
+
+return string
+
+find how many integers/ciphered blocks are there in the ciphered file
+
+allocate the return value, we know the total number of ciphered blocks of characters
+
+each number in the ciphered text(seperated via newline) is read and have turned into mpz\-\_\-t and decrypted then added to the return string
+
+after we read a new line we will turn thar number into mpz\-\_\-t and decrypt it.
+
+read the ciphered number into c\-\_\-val
+
+decrypt the read number;
+
+change gmp\-\_\-integer to an integer
+
+decompress the int to 4 chars.
+
+add the deciphered block to return string
+
+the next starting index of next sscanf on c. current index points to \char`\"{}$\backslash$n\char`\"{} but next index points to the starting of a new ciphered block \hypertarget{general__opts_8h_a360ad629958e9cc22babf446ed6550f3}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!pri\-\_\-enc@{pri\-\_\-enc}}
+\index{pri\-\_\-enc@{pri\-\_\-enc}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{pri\-\_\-enc}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf pri\-\_\-enc} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{m, }
+\item[{{\bf rsa\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a360ad629958e9cc22babf446ed6550f3}
+
+
+Encrypts the given plain text with the given private key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Plain Text \\
+\hline
+{\em key} & Private key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encrypted text
+\end{DoxyReturn}
+Since the R\-S\-A encryption used in this project is one type, basically the other encryption function is called. It decrypts the encrypted text with public key.
+
+C = M$^\wedge$e mod n \hypertarget{general__opts_8h_a5736affaf8dc8bc05558cee3f198f62e}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!pub\-\_\-dec@{pub\-\_\-dec}}
+\index{pub\-\_\-dec@{pub\-\_\-dec}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{pub\-\_\-dec}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf pub\-\_\-dec} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{c, }
+\item[{{\bf rsa\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a5736affaf8dc8bc05558cee3f198f62e}
+
+
+Decrypts the given ciphered text(encrypted with private encryption) with the given public key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Ciphered Text \\
+\hline
+{\em key} & Public Key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decrypted text
+\end{DoxyReturn}
+The function does the general decryption with public key. It resolves the encryption with private key.
+
+M = C$^\wedge$d mod n \hypertarget{general__opts_8h_ac2a35e39b455ce1139aa1c8684301da1}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!pub\-\_\-enc@{pub\-\_\-enc}}
+\index{pub\-\_\-enc@{pub\-\_\-enc}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{pub\-\_\-enc}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf pub\-\_\-enc} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{m, }
+\item[{{\bf rsa\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_ac2a35e39b455ce1139aa1c8684301da1}
+
+
+Encrypts the given plain text with the given public key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Plain Text \\
+\hline
+{\em key} & Public key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encrypted text
+\end{DoxyReturn}
+This function basically does the R\-S\-A encryption. The method used to represent characters as numbers is compression. Every 4 character block is put into an integer and this integer value is encrypted. Encryption is done via exponentiation.
+
+C = M$^\wedge$e mod n will contain the compressed value of characters
+
+size of the plain text
+
+cycle\-\_\-number is the number which determines how many compressions will be made and as a result the encrypted portions number.
+
+key\-\_\-length determines the max length of the encrypted value
+
+temporary values will be used in encryption
+
+there will be cycle\-\_\-number encrypted value as a result,which can be at most at the length of n, since they are taken mod of n so we allocate memory according to that values. In addition there will be separators '\par
+' at the end of each encrypted value.
+
+initialize the string to termination character
+
+compress 4 chars to an int compressed
+
+exponentiation
+
+add the exponentiated value to the string \hypertarget{general__opts_8h_a20100a033cb2270b7e73bc8411fb5421}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!read\-\_\-file\-\_\-to\-\_\-string@{read\-\_\-file\-\_\-to\-\_\-string}}
+\index{read\-\_\-file\-\_\-to\-\_\-string@{read\-\_\-file\-\_\-to\-\_\-string}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{read\-\_\-file\-\_\-to\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf read\-\_\-file\-\_\-to\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a20100a033cb2270b7e73bc8411fb5421}
+
+
+Gets file content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File content
+\end{DoxyReturn}
+File contents is read and put into a character array. In the end the character array is returned to user. \hypertarget{general__opts_8h_a118bb481605bbf6a2ad228f078369999}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!write\-\_\-private\-\_\-key\-\_\-to\-\_\-file@{write\-\_\-private\-\_\-key\-\_\-to\-\_\-file}}
+\index{write\-\_\-private\-\_\-key\-\_\-to\-\_\-file@{write\-\_\-private\-\_\-key\-\_\-to\-\_\-file}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{write\-\_\-private\-\_\-key\-\_\-to\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf write\-\_\-private\-\_\-key\-\_\-to\-\_\-file} (
+\begin{DoxyParamCaption}
+\item[{{\bf rsa\-\_\-keys} $\ast$}]{keys, }
+\item[{char $\ast$}]{username}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a118bb481605bbf6a2ad228f078369999}
+
+
+Writes the private key to file with user name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keys} & \\
+\hline
+{\em username} & Since our keys are user based, each person has a key pair, we need to discrete them in a way. So in this project user names are requested while a pair of R\-S\-A key is being created. This way there will be no mix ups in the keys. \\
+\hline
+\end{DoxyParams}
+\hypertarget{general__opts_8h_a2f2b3dc8a17b5aacaef9690409de89df}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!write\-\_\-public\-\_\-key\-\_\-to\-\_\-file@{write\-\_\-public\-\_\-key\-\_\-to\-\_\-file}}
+\index{write\-\_\-public\-\_\-key\-\_\-to\-\_\-file@{write\-\_\-public\-\_\-key\-\_\-to\-\_\-file}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{write\-\_\-public\-\_\-key\-\_\-to\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf write\-\_\-public\-\_\-key\-\_\-to\-\_\-file} (
+\begin{DoxyParamCaption}
+\item[{{\bf rsa\-\_\-keys} $\ast$}]{keys, }
+\item[{char $\ast$}]{username}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_a2f2b3dc8a17b5aacaef9690409de89df}
+
+
+Writes the public key to file with user name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keys} & \\
+\hline
+{\em username} & Since our keys are user based, each person has a key pair, we need to discrete them in a way. So in this project user names are requested while a pair of R\-S\-A key is being created. This way there will be no mix ups in the keys. \\
+\hline
+\end{DoxyParams}
+\hypertarget{general__opts_8h_ab2b15940f94a5725da201f7ccfc1f742}{\index{general\-\_\-opts.\-h@{general\-\_\-opts.\-h}!write\-\_\-string\-\_\-to\-\_\-file@{write\-\_\-string\-\_\-to\-\_\-file}}
+\index{write\-\_\-string\-\_\-to\-\_\-file@{write\-\_\-string\-\_\-to\-\_\-file}!general_opts.h@{general\-\_\-opts.\-h}}
+\subsubsection[{write\-\_\-string\-\_\-to\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf write\-\_\-string\-\_\-to\-\_\-file} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{general__opts_8h_ab2b15940f94a5725da201f7ccfc1f742}
+
+
+Writes the string to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File \\
+\hline
+{\em str} & The string to be written to the file\\
+\hline
+\end{DoxyParams}
+Writes the given string to a file with the desired file name. 

@@ -1,0 +1,155 @@
+\hypertarget{sha256_8h}{\section{lib/sha256.h File Reference}
+\label{sha256_8h}\index{lib/sha256.\-h@{lib/sha256.\-h}}
+}
+
+
+The S\-H\-A implementation with 256 bit hash.  
+
+
+{\ttfamily \#include $<$string.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsha256__context}{sha256\-\_\-context}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{sha256_8h_a2d25bcd37166cc98f0d823cdb8c553ef}{\#define {\bfseries uint8}~unsigned char}\label{sha256_8h_a2d25bcd37166cc98f0d823cdb8c553ef}
+
+\item 
+\hypertarget{sha256_8h_a9695cf1104606879c5d3f0221635a069}{\#define {\bfseries uint32}~unsigned long int}\label{sha256_8h_a9695cf1104606879c5d3f0221635a069}
+
+\item 
+\#define {\bfseries G\-E\-T\-\_\-\-U\-I\-N\-T32}(n, b, i)
+\item 
+\#define {\bfseries P\-U\-T\-\_\-\-U\-I\-N\-T32}(n, b, i)
+\item 
+\hypertarget{sha256_8h_a34f8c30efd49bafaaef210c443a467dc}{\#define {\bfseries S\-H\-R}(x, n)~((x \& 0x\-F\-F\-F\-F\-F\-F\-F\-F) $>$$>$ n)}\label{sha256_8h_a34f8c30efd49bafaaef210c443a467dc}
+
+\item 
+\hypertarget{sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{\#define {\bfseries R\-O\-T\-R}(x, n)~(S\-H\-R(x,n) $|$ (x $<$$<$ (32 -\/ n)))}\label{sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}
+
+\item 
+\hypertarget{sha256_8h_a4fe3c738087e923a3174ad2a116e3be5}{\#define {\bfseries S0}(x)~(R\-O\-T\-R(x, 7) $^\wedge$ R\-O\-T\-R(x,18) $^\wedge$  S\-H\-R(x, 3))}\label{sha256_8h_a4fe3c738087e923a3174ad2a116e3be5}
+
+\item 
+\hypertarget{sha256_8h_a59c41bcd16cbf3247d426429c3bf8e08}{\#define {\bfseries S1}(x)~(R\-O\-T\-R(x,17) $^\wedge$ R\-O\-T\-R(x,19) $^\wedge$  S\-H\-R(x,10))}\label{sha256_8h_a59c41bcd16cbf3247d426429c3bf8e08}
+
+\item 
+\hypertarget{sha256_8h_a53a4af5a86745d27a1c31559b65eaa5c}{\#define {\bfseries S2}(x)~(R\-O\-T\-R(x, 2) $^\wedge$ R\-O\-T\-R(x,13) $^\wedge$ R\-O\-T\-R(x,22))}\label{sha256_8h_a53a4af5a86745d27a1c31559b65eaa5c}
+
+\item 
+\hypertarget{sha256_8h_ad4cd7aab396ec307ef11545e4c0d322c}{\#define {\bfseries S3}(x)~(R\-O\-T\-R(x, 6) $^\wedge$ R\-O\-T\-R(x,11) $^\wedge$ R\-O\-T\-R(x,25))}\label{sha256_8h_ad4cd7aab396ec307ef11545e4c0d322c}
+
+\item 
+\hypertarget{sha256_8h_aaefb24d5edbae9ebbaae9896fa48f46b}{\#define {\bfseries F0}(x, y, z)~((x \& y) $|$ (z \& (x $|$ y)))}\label{sha256_8h_aaefb24d5edbae9ebbaae9896fa48f46b}
+
+\item 
+\hypertarget{sha256_8h_a3c2b6b2959faadfcf644757cb570b734}{\#define {\bfseries F1}(x, y, z)~(z $^\wedge$ (x \& (y $^\wedge$ z)))}\label{sha256_8h_a3c2b6b2959faadfcf644757cb570b734}
+
+\item 
+\#define {\bfseries R}(t)
+\item 
+\#define {\bfseries P}(a, b, c, d, e, f, g, h, x, K)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{sha256_8h_a5d2404b9b11281a775d03d53b6388cad}{void {\bfseries sha256\-\_\-starts} (\hyperlink{structsha256__context}{sha256\-\_\-context} $\ast$ctx)}\label{sha256_8h_a5d2404b9b11281a775d03d53b6388cad}
+
+\item 
+\hypertarget{sha256_8h_a98253d00877219631f3848f09ed5fecc}{void {\bfseries sha256\-\_\-update} (\hyperlink{structsha256__context}{sha256\-\_\-context} $\ast$ctx, uint8 $\ast$input, uint32 length)}\label{sha256_8h_a98253d00877219631f3848f09ed5fecc}
+
+\item 
+\hypertarget{sha256_8h_a419131328bee479456f5990ca08a475e}{void {\bfseries sha256\-\_\-finish} (\hyperlink{structsha256__context}{sha256\-\_\-context} $\ast$ctx, uint8 digest\mbox{[}32\mbox{]})}\label{sha256_8h_a419131328bee479456f5990ca08a475e}
+
+\item 
+\hypertarget{sha256_8h_a140799288b2d02602887ecac20a01268}{void {\bfseries sha256\-\_\-process} (\hyperlink{structsha256__context}{sha256\-\_\-context} $\ast$ctx, uint8 data\mbox{[}64\mbox{]})}\label{sha256_8h_a140799288b2d02602887ecac20a01268}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The S\-H\-A implementation with 256 bit hash. The F\-I\-P\-S-\/180-\/2 compliant S\-H\-A-\/256 implementation by Christophe Devine.
+
+\begin{DoxyAuthor}{Author}
+Christophe Devine 
+\end{DoxyAuthor}
+
+
+\subsection{Define Documentation}
+\hypertarget{sha256_8h_a544d14714aed6d150435336296c66061}{\index{sha256.\-h@{sha256.\-h}!G\-E\-T\-\_\-\-U\-I\-N\-T32@{G\-E\-T\-\_\-\-U\-I\-N\-T32}}
+\index{G\-E\-T\-\_\-\-U\-I\-N\-T32@{G\-E\-T\-\_\-\-U\-I\-N\-T32}!sha256.h@{sha256.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-U\-I\-N\-T32}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-U\-I\-N\-T32(
+\begin{DoxyParamCaption}
+\item[{}]{n, }
+\item[{}]{b, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}}\label{sha256_8h_a544d14714aed6d150435336296c66061}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+{                                               \
+(n) = ( (uint32) (b)[(i)    ] << 24 )       \
+| ( (uint32) (b)[(i) + 1] << 16 )       \
+| ( (uint32) (b)[(i) + 2] <<  8 )       \
+| ( (uint32) (b)[(i) + 3]       );      \
+}
+\end{DoxyCode}
+\hypertarget{sha256_8h_a8e8a14b8da1459bd6fd0b55b3171ab06}{\index{sha256.\-h@{sha256.\-h}!P@{P}}
+\index{P@{P}!sha256.h@{sha256.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}\#define P(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{g, }
+\item[{}]{h, }
+\item[{}]{x, }
+\item[{}]{K}
+\end{DoxyParamCaption}
+)}}\label{sha256_8h_a8e8a14b8da1459bd6fd0b55b3171ab06}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+{                                               \
+temp1 = h + S3(e) + F1(e,f,g) + K + x;      \
+temp2 = S2(a) + F0(a,b,c);                  \
+d += temp1; h = temp1 + temp2;              \
+}
+\end{DoxyCode}
+\hypertarget{sha256_8h_a8f3a8299ffeba42ea7e2ec2459cb9995}{\index{sha256.\-h@{sha256.\-h}!P\-U\-T\-\_\-\-U\-I\-N\-T32@{P\-U\-T\-\_\-\-U\-I\-N\-T32}}
+\index{P\-U\-T\-\_\-\-U\-I\-N\-T32@{P\-U\-T\-\_\-\-U\-I\-N\-T32}!sha256.h@{sha256.\-h}}
+\subsubsection[{P\-U\-T\-\_\-\-U\-I\-N\-T32}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-U\-T\-\_\-\-U\-I\-N\-T32(
+\begin{DoxyParamCaption}
+\item[{}]{n, }
+\item[{}]{b, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}}\label{sha256_8h_a8f3a8299ffeba42ea7e2ec2459cb9995}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+{                                               \
+(b)[(i)    ] = (uint8) ( (n) >> 24 );       \
+(b)[(i) + 1] = (uint8) ( (n) >> 16 );       \
+(b)[(i) + 2] = (uint8) ( (n) >>  8 );       \
+(b)[(i) + 3] = (uint8) ( (n)       );       \
+}
+\end{DoxyCode}
+\hypertarget{sha256_8h_a2aa52cc83b38d01e9ba187b092057d7e}{\index{sha256.\-h@{sha256.\-h}!R@{R}}
+\index{R@{R}!sha256.h@{sha256.\-h}}
+\subsubsection[{R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)}}\label{sha256_8h_a2aa52cc83b38d01e9ba187b092057d7e}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(                                               \
+W[t] = S1(W[t -  2]) + W[t -  7] +          \
+S0(W[t - 15]) + W[t - 16]            \
+)
+\end{DoxyCode}
